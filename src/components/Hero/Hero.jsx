@@ -17,7 +17,9 @@ const Hero = () => {
             Where the possibilities are{" "}
             <span className="hero__subtitle--highlight">endless!</span>
           </p>
-          <Button className="hero__button" href="#" size="lg">Learn more</Button>
+          <Button className="hero__button" href="#" size="lg">
+            Learn more
+          </Button>
         </div>
         <div className="hero__image">
           <img src={earthImage} srcSet={`${earthImage2x} 2x`} alt="Earth" />

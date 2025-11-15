@@ -4,15 +4,15 @@
     display: flex;
     flex-direction: column;
     gap: 17px;
-    margin-block-end: 60px;
+    margin-block-end: $gap-7-5;
 
     @include media-mobile {
-        gap: 12px;
+        gap: $gap-1-5;
         margin-block-end: 53px;
     }
 
     @include media-tablet {
-        gap: 20px;
+        gap: $gap-2-5;
         margin-block-end: 50px;
     }
 

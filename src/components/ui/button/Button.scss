@@ -1,13 +1,14 @@
 @import '../../../styles/shared';
 
 @mixin base-button-size-desktop {
-  padding: 14px 40px;
+  padding: 14px $gap-5;
   font-size: $font-size-button;
   border-radius: 100px;
 }
 
 @mixin base-button-size-mobile {
-  padding: 7px 40px;
+  padding: 7px $gap-5;
+  font-size: $font-size-md;
 }
 
 .button {

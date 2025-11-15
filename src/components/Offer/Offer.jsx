@@ -12,6 +12,7 @@ export const Offer = ({ offer }) => {
         "--offer-image-1x": `url(${images[0]})`,
         "--offer-image-2x": `url(${images[1]})`,
       }}
+      role="listitem"
     >
       <div className="offer__container">
         <h3 className="offer__title">{title}</h3>

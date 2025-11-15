@@ -42,7 +42,7 @@
     &--hamburger {
         display: block;
         position: fixed;
-        top: 48px;
+        top: $gap-6;
         right: 0;
         width: 100vw;
         height: calc(100vh - 48px);
@@ -52,7 +52,7 @@
         .navigation__list {
             flex-direction: column;
             justify-content: center;
-            gap: 24px;
+            gap: $gap-3;
             height: 100%;
         }
 
@@ -65,7 +65,7 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            padding-block: 12px;
+            padding-block: $gap-1-5;
         }
 
         .navigation__link--icon {

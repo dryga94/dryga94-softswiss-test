@@ -16,10 +16,15 @@ export const Hamburger = () => {
           isOpen ? "hamburger__button--active" : ""
         }`}
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={isOpen}
       >
-        <div></div>
-        <div></div>
-        <div></div>
+        <span className="visually-hidden">
+          {isOpen ? "Close menu" : "Open menu"}
+        </span>
+        <div />
+        <div />
+        <div />
       </button>
       <Navigation className="navigation--hamburger" onLinkClick={closeMenu} />
     </div>

@@ -24,9 +24,10 @@ export const Navigation = ({ className = "", onLinkClick }) => {
                 className={linkClasses}
                 href={item.href}
                 onClick={handleLinkClick}
+                aria-label={item?.icon ? item.title : undefined}
               >
                 {item?.icon ? (
-                  <item.icon aria-label={item.title} />
+                  <item.icon aria-hidden="true" />
                 ) : (
                   <span>{item.title}</span>
                 )}

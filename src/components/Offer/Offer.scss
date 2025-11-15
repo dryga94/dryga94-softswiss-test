@@ -1,7 +1,7 @@
 @import '../../styles/shared';
 
 .offer {
-    padding: 36px;
+    padding: $gap-4;
     container-type: inline-size;
     container-name: offers-container;
     border-radius: $border-radius-secondary;

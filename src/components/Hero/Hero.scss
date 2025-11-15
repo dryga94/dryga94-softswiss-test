@@ -5,37 +5,33 @@
         $gradient-dark,
        image-set(url('../../assets/images/optimized1x/hero_1x.webp') 1x, url('../../assets/images/optimized2x/hero_2x.webp') 2x)
     );
-    padding-block-start: 60px;
-    padding-block-end: 64px;
+    padding-block-start: $gap-7-5;
+    padding-block-end: $gap-8;
 
-    @media (max-width: 762px) {
+    @include media-tablet {
+        padding-block-start: $gap-3;
+        padding-block-end: $gap-7-5;
+
         @include multiple-bg(
             $gradient-dark,
             image-set(url('../../assets/images/low-res/hero_tablet.webp') 1x, url('../../assets/images/optimized1x/hero_1x.webp') 2x)
         );
     }
 
-    @media (max-width: 360px) {
+    @include media-mobile {
+        padding-block-start: 0;
+        padding-block-end: $gap-5-5;
+
         @include multiple-bg(
             $gradient-dark,
             image-set(url('../../assets/images/low-res/hero_mobile.webp') 1x, url('../../assets/images/low-res/hero_tablet.webp') 2x)
         );
     }
 
-    @include media-tablet {
-        padding-block-start: 26px;
-        padding-block-end: 58px;
-    }
-
-    @include media-mobile {
-        padding-block-start: 0;
-        padding-block-end: 44px;
-    }
-
     &__container {
         display: flex;
         align-items: center;
-        gap: 56px;
+        gap: $gap-7;
 
         @include media-tablet {
            align-items: center;
@@ -49,23 +45,23 @@
 
     &__content {
         flex: 1 0 693px;
-        margin-block-start: 32px;
+        margin-block-start: $gap-4;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 22px;
 
         @include media-tablet {
-            margin-block-start: 24px;
+            margin-block-start: $gap-3;
             flex-basis: 411px;
         }
 
         @include media-mobile {
             text-align: center;
-            gap: 17px;
+            gap: $gap-2;
             flex-basis: auto;
             align-items: center;
-            margin-block-start: -12px;
+            margin-block-start: -$gap-1-5;
         }
     }
 
@@ -107,7 +103,7 @@
             order: -1;
             transform: none;
             margin-block-start: -100px;
-            margin-inline-start: -24px;
+            margin-inline-start: -$gap-3;
         }
     }
 }

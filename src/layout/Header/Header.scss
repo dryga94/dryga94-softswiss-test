@@ -1,16 +1,16 @@
 @import '../../styles/shared';
 
 .header {
-    padding-block-start: 24px;
-    padding-block-end: 24px;
+    padding-block-start: $gap-3;
+    padding-block-end: $gap-3;
     background-color: $color-black;
     position: sticky;
     top: 0;
     z-index: 100;
 
     @include media-mobile {
-        padding-block-start: 12px;
-        padding-block-end: 12px;
+        padding-block-start: $gap-1-5;
+        padding-block-end: $gap-1-5;
         height: 48px;
     }
 
