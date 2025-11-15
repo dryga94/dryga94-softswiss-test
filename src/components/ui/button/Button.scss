@@ -1,0 +1,62 @@
+@import '../../../styles/shared';
+
+@mixin base-button-size-desktop {
+  padding: 14px 40px;
+  font-size: $font-size-button;
+  border-radius: 100px;
+}
+
+@mixin base-button-size-mobile {
+  padding: 7px 40px;
+}
+
+.button {
+    transition: $transition-base;
+    cursor: pointer;
+
+    &--primary {
+        color: $color-black;
+        background-color: $color-secondary;
+
+        &:hover {
+            background-color: colorAlpha($color-secondary, 0.6);
+        }
+    }
+
+    &--secondary {
+        border: 2px solid $color-secondary;
+        color: $color-secondary;
+        background: none;
+
+        &:hover {
+            border-color: colorAlpha($color-secondary, 0.6);
+            color: colorAlpha($color-secondary, 0.6);
+        }
+    }
+
+    &--link {
+        font-weight: $font-weight-extra-bold;
+        color: $color-secondary;
+
+        &:hover {
+            color: colorAlpha($color-secondary, 0.6);
+        }
+    }
+
+    &--md {
+        @include base-button-size-desktop;
+
+        @include media-tablet {
+            @include base-button-size-mobile;
+        }
+    }
+
+    &--lg {
+        @include base-button-size-desktop;
+
+        @include media-mobile {
+            @include base-button-size-mobile;
+        }
+    }
+
+}

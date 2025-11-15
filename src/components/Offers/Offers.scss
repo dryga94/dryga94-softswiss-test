@@ -1,0 +1,32 @@
+@import '../../styles/shared';
+
+.offers {
+    padding-block-start: 58px;
+    padding-block-end: 62px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include media-tablet {
+        gap: 30px;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px;
+
+        & > *:nth-child(4n + 1),
+        & > *:nth-child(4n + 4) {
+          grid-column: span 2;
+
+          @include media-tablet {
+            grid-column: span 1
+          }
+        }
+
+        @include media-mobile {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+}

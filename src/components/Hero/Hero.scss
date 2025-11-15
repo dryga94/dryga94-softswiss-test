@@ -1,0 +1,113 @@
+@import '../../styles/shared';
+
+.hero {
+    @include multiple-bg(
+        $gradient-dark,
+       image-set(url('../../assets/images/optimized1x/hero_1x.webp') 1x, url('../../assets/images/optimized2x/hero_2x.webp') 2x)
+    );
+    padding-block-start: 60px;
+    padding-block-end: 64px;
+
+    @media (max-width: 762px) {
+        @include multiple-bg(
+            $gradient-dark,
+            image-set(url('../../assets/images/low-res/hero_tablet.webp') 1x, url('../../assets/images/optimized1x/hero_1x.webp') 2x)
+        );
+    }
+
+    @media (max-width: 360px) {
+        @include multiple-bg(
+            $gradient-dark,
+            image-set(url('../../assets/images/low-res/hero_mobile.webp') 1x, url('../../assets/images/low-res/hero_tablet.webp') 2x)
+        );
+    }
+
+    @include media-tablet {
+        padding-block-start: 26px;
+        padding-block-end: 58px;
+    }
+
+    @include media-mobile {
+        padding-block-start: 0;
+        padding-block-end: 44px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 56px;
+
+        @include media-tablet {
+           align-items: center;
+        }
+
+        @include media-mobile {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    &__content {
+        flex: 1 0 693px;
+        margin-block-start: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+
+        @include media-tablet {
+            margin-block-start: 24px;
+            flex-basis: 411px;
+        }
+
+        @include media-mobile {
+            text-align: center;
+            gap: 17px;
+            flex-basis: auto;
+            align-items: center;
+            margin-block-start: -12px;
+        }
+    }
+
+    &__title {
+        &--highlight {
+            color: $color-primary;
+        }
+    }
+
+    &__subtitle {
+        font-size: $font-size-xl;
+        font-weight: $font-weight-extra-bold;
+        font-synthesis: none;
+        line-height: 1.2;
+
+        @include media-tablet {
+            font-size: $font-size-button;
+        }
+
+        @include media-mobile {
+            font-size: $font-size-md;
+        }
+
+        &--highlight {
+            color: $color-secondary;
+        }
+    }
+
+    &__image {
+        width: 330px;
+        flex: none;
+
+        @include media-tablet {
+            transform: translateX(44px);
+            width: 300px;
+        }
+
+        @include media-mobile {
+            order: -1;
+            transform: none;
+            margin-block-start: -100px;
+            margin-inline-start: -24px;
+        }
+    }
+}

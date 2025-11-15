@@ -1,0 +1,77 @@
+@import '../../styles/shared';
+
+
+.navigation {
+
+
+   &__list {
+        display: flex;
+        align-items: center;
+        gap: 27px;
+   }
+
+   &__link {
+        font-weight: $font-weight-extra-bold;
+        background-image: linear-gradient(98.25deg, $color-white 0%, $color-white 50%, $color-secondary 50%, $color-primary 100%);
+        background-size: 200% 200%;
+        background-position: 0% 50%;
+        background-clip: text;
+        color: transparent;
+        min-width: 77px;
+        display: flex;
+        transition: background-position $transition-base;
+
+        &--icon {
+            width: 24px;
+            height: 24px;
+            fill: url(#iconGradient);
+            pointer-events: auto;
+
+
+        }
+
+        &:hover {
+            background-position: 100% 50%;
+        }
+   }
+
+   @include media-mobile {
+        display: none;
+    }
+
+    &--hamburger {
+        display: block;
+        position: fixed;
+        top: 48px;
+        right: 0;
+        width: 100vw;
+        height: calc(100vh - 48px);
+        background-color: $color-black;
+        z-index: 100;
+
+        .navigation__list {
+            flex-direction: column;
+            justify-content: center;
+            gap: 24px;
+            height: 100%;
+        }
+
+        .navigation__link {
+            font-size: 1.5rem;
+            min-width: auto;
+        }
+
+        .navigation__item {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-block: 12px;
+        }
+
+        .navigation__link--icon {
+            width: 24px;
+            height: 24px;
+        }
+
+    }
+}

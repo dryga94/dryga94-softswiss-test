@@ -1,0 +1,86 @@
+@import '../../styles/shared';
+
+.read-more {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-block-end: 60px;
+
+    @include media-mobile {
+        gap: 12px;
+        margin-block-end: 53px;
+    }
+
+    @include media-tablet {
+        gap: 20px;
+        margin-block-end: 50px;
+    }
+
+    &__checkbox {
+        display: none;
+        visibility: hidden;
+    }
+
+    &__label {
+        display: inline-block;
+        cursor: pointer;
+        order: 3;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-extra-bold;
+
+        @include media-tablet {
+            font-size: $font-size-md;
+        }
+
+        @include media-mobile {
+            font-size: $font-size-sm;
+        }
+
+        &::before {
+            content: 'Read more';
+            display: inline-block;
+            color: $color-secondary;
+
+            &:hover {
+                background-color: colorAlpha($color-secondary, 0.6);
+            }
+        }
+    }
+
+    &__checkbox {
+        &:checked {
+            & + .read-more__label {
+                &::before {
+                    content: 'Read less';
+                }
+            }
+
+            & ~ .read-more__description {
+                -webkit-line-clamp: initial;
+                line-clamp: initial;
+            }
+        }
+    }
+
+    &__description {
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        color: $color-gray;
+        font-size: $font-size-lg;
+
+        @include media-tablet {
+            -webkit-line-clamp: 7;
+            line-clamp: 7;
+            font-size: $font-size-md;
+        }
+
+        @include media-mobile {
+            -webkit-line-clamp: 13;
+            line-clamp: 13;
+            font-size: $font-size-sm;
+        }
+    }
+}

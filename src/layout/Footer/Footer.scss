@@ -1,0 +1,23 @@
+@import '../../styles/shared';
+
+.footer {
+    padding-block-start: 58px;
+    padding-block-end: 58px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 127px;
+    background-color: $color-black;
+
+
+    &__text {
+        font-size: 1.125rem;
+        line-height: 1.75;
+        color: $color-secondary;
+    }
+
+    &_image {
+        width: 80px;
+    }
+}

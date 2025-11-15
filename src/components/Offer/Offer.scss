@@ -1,0 +1,81 @@
+@import '../../styles/shared';
+
+.offer {
+    padding: 36px;
+    container-type: inline-size;
+    container-name: offers-container;
+    border-radius: $border-radius-secondary;
+    transition: $transition-base;
+    @include multiple-bg(
+        $gradient-dark,
+        image-set(var(--offer-image-1x) 1x, var(--offer-image-2x) 2x)
+    );
+
+    @include media-mobile {
+        min-height: 350px;
+        padding: 27px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+
+        @include media-tablet{
+            height: 100%;
+            justify-content: flex-end;
+        }
+    }
+
+    &__title {
+        max-width: 60%;
+
+        @include media-tablet {
+            max-width: 80%;
+        }
+
+        @include container-content(offers-container, 1015px) {
+            font-size: 2.875rem;
+        }
+    }
+
+    &__description {
+        font-size: 1.625rem;
+        line-height: 1.2;
+        max-width: 60%;
+        font-weight: $font-weight-extra-bold;
+
+
+
+        @include container-content(offers-container, 1015px) {
+            max-width: 100%;
+            font-size: 1.5rem;
+        }
+
+        @include media-tablet {
+            font-size: $font-size-md;
+
+            & >  span {
+                display: none;
+            }
+        }
+
+        &::after {
+            content: attr(data-mobile-text);
+            display: none;
+            font-size: inherit;
+            line-height: inherit;
+
+            @include media-tablet {
+                display: block;
+            }
+        }
+    }
+
+}

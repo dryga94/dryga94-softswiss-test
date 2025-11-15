@@ -1,0 +1,34 @@
+h1 {
+    font-size: $font-size-xxxxl;
+    line-height: 1;
+
+    @include media-tablet {
+        font-size: $font-size-xxl;
+    }
+
+    @include media-mobile {
+        font-size: $font-size-xll;
+    }
+}
+
+h2 {
+    font-size: $font-size-xl;
+    line-height: 1.2;
+
+    @include media-tablet {
+        font-size: 1.5rem;
+    }
+
+    @include media-mobile {
+        font-size: $font-size-button;
+    }
+}
+
+h3 {
+    font-size: 4.625rem;
+    line-height: 1;
+
+    @include media-tablet {
+        font-size: 2.5rem;
+    }
+}

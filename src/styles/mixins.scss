@@ -1,0 +1,25 @@
+
+@mixin multiple-bg($bg1, $bg2: none, $bg3: none) {
+  background-image: $bg1, $bg2, $bg3;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center, center, center;
+  background-size: cover, cover, cover;
+}
+
+@mixin container-content($name, $max-width) {
+    @container #{$name} (max-width: #{$max-width}) {
+        @content;
+    }
+}
+
+@mixin media-tablet {
+  @media (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
