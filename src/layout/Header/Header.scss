@@ -23,9 +23,11 @@
 
     &__logo {
         width: 104px;
+        min-height: 36px;
 
         @include media-mobile {
             width: 71px;
+            min-height: 25px;
         }
     }
 }
