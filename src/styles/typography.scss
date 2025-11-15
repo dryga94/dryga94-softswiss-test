@@ -1,3 +1,5 @@
+@use './shared' as *;
+
 h1 {
     font-size: $font-size-xxxxl;
     line-height: 1;

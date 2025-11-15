@@ -6,7 +6,7 @@ A React application built with modern web technologies.
 
 The project is available and deployed on Vercel:
 
-🔗 **[View Live Project](https://vercel.com/dryga94s-projects/dryga-94softswiss-test)**
+🔗 **[View Live Project](https://dryga94-softswiss-test.vercel.app/)**
 
 ## Requirements
 

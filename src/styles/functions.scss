@@ -1,4 +1,6 @@
 
+@use 'sass:color';
+
 @function colorAlpha($color, $opacity: 1) {
-  @return rgba(red($color), green($color), blue($color), $opacity);
+  @return rgba(color.channel($color, "red"), color.channel($color, "green"), color.channel($color, "blue"), $opacity);
 }

@@ -1,4 +1,4 @@
-@import '../../../styles/shared';
+@use '../../../styles/shared' as *;
 
 @mixin base-button-size-desktop {
   padding: 14px $gap-5;

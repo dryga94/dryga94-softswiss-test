@@ -1,3 +1,4 @@
+@use './variables' as *;
 
 @mixin multiple-bg($bg1, $bg2: none, $bg3: none) {
   background-image: $bg1, $bg2, $bg3;
