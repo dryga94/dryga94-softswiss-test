@@ -34,7 +34,7 @@
     }
 
     &__title {
-        max-width: 60%;
+        max-width: 65%;
 
         @include media-tablet {
             max-width: 80%;
@@ -48,7 +48,7 @@
     &__description {
         font-size: 1.625rem;
         line-height: 1.2;
-        max-width: 60%;
+        max-width: 65%;
         font-weight: $font-weight-extra-bold;
 
 
