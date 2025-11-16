@@ -42,6 +42,7 @@
 
         @include container-content(offers-container, 1015px) {
             font-size: 2.875rem;
+            max-width: 60%;
         }
     }
 
