@@ -17,13 +17,14 @@
         background-position: 0% 50%;
         background-clip: text;
         color: transparent;
-        min-width: 77px;
+        padding: $gap-1 $gap-2;
         display: flex;
         transition: background-position $transition-base;
 
         &--icon {
             width: 24px;
             height: 24px;
+            padding: 0;
             fill: url(#iconGradient);
             pointer-events: auto;
 

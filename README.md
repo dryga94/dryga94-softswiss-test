@@ -4,9 +4,9 @@ A React application built with modern web technologies.
 
 ## Live Demo
 
-The project is available and deployed on Vercel:
+The project is available and deployed on GitHub pages:
 
-🔗 **[View Live Project](https://dryga94-softswiss-test.vercel.app/)**
+🔗 **[View Live Project](https://dryga94.github.io/dryga94-softswiss-test/)**
 
 ## Requirements
 
